@@ -1,0 +1,11 @@
+--- openalpp/src/Makefile.am.orig	2005-02-25 15:26:53.000000000 +0100
++++ openalpp/src/Makefile.am	2005-03-05 18:17:37.808792752 +0100
+@@ -33,7 +33,7 @@
+ #streamfiles=nostreaming.cpp noinputdevice.cpp nofilestream.cpp
+ 
+ libopenalpp_la_SOURCES = $(basicfiles) $(streamfiles) $(devicefiles) $(oggfiles)
+-
++libopenalpp_la_LIBADD = -lOpenThreads
+ 
+ lib_LTLIBRARIES = libopenalpp.la
+ 
