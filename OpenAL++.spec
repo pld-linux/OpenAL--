@@ -32,6 +32,7 @@ Summary(pl):	Pliki nag³ówkowe biblioteki OpenAL++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	OpenAL-devel
+Requires:	libstdc++-devel
 
 %description devel
 Header files for OpenAL++ library.
