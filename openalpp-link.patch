@@ -5,7 +5,28 @@
  
  libopenalpp_la_SOURCES = $(basicfiles) $(streamfiles) $(devicefiles) $(oggfiles)
 -
-+libopenalpp_la_LIBADD = -lOpenThreads
++libopenalpp_la_LIBADD = -lOpenThreads $(LIBPORTAUDIO) $(LIBOGG)
  
  lib_LTLIBRARIES = libopenalpp.la
  
+--- openalpp/configure.in.orig	2005-02-25 09:17:56.000000000 +0100
++++ openalpp/configure.in	2005-03-05 18:30:08.303700184 +0100
+@@ -70,11 +70,16 @@
+ AC_CHECK_LIB(openal,main)
+ 
+ # PortAudio
+-AC_CHECK_LIB(portaudio,main,WITH_PORTAUDIO="yes")
++AC_CHECK_LIB(portaudio,main,[WITH_PORTAUDIO="disabledanyway_yes"
++			     LIBPORTAUDIO="-lportaudio"
++			     AC_DEFINE([WITH_PORTAUDIO],[1],[Use portaudio])])
++AC_SUBST(LIBPORTAUDIO)
+ AM_CONDITIONAL(WITH_PORTAUDIO, test "$WITH_PORTAUDIO" = "yes")
+ 
+ # Ogg Vorbis
+-AC_CHECK_LIB(ogg,main,WITH_OGGVORBIS="yes")
++AC_CHECK_LIB(ogg,main,[WITH_OGGVORBIS="yes"
++		       LIBOGG="-logg"])
++AC_SUBST(LIBOGG)
+ AM_CONDITIONAL(WITH_OGGVORBIS, test "$WITH_OGGVORBIS" = "yes")
+ 
+ dnl Checks for header files.
