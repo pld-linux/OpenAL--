@@ -1,6 +1,6 @@
 %define _snap 050303
 Summary:	An object oriented wrapper for OpenAL
-Summary(pl.UTF-8):   Obiektowy wrapper dla OpenAL
+Summary(pl.UTF-8):	Obiektowy wrapper dla OpenAL
 Name:		OpenAL++
 Version:	0.2
 Release:	0.20%{_snap}.1
@@ -33,7 +33,7 @@ strumieniowania dźwięku po gniazdach lub z urządzenia wejściowego.
 
 %package devel
 Summary:	Header files for OpenAL++ library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki OpenAL++
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki OpenAL++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	OpenAL-devel
@@ -50,7 +50,7 @@ Pliki nagłówkowe biblioteki OpenAL++.
 
 %package static
 Summary:	Static OpenAL++ library
-Summary(pl.UTF-8):   Statyczna biblioteka OpenAL++
+Summary(pl.UTF-8):	Statyczna biblioteka OpenAL++
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
