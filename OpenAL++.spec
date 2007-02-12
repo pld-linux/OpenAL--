@@ -1,6 +1,6 @@
 %define _snap 050303
 Summary:	An object oriented wrapper for OpenAL
-Summary(pl):	Obiektowy wrapper dla OpenAL
+Summary(pl.UTF-8):   Obiektowy wrapper dla OpenAL
 Name:		OpenAL++
 Version:	0.2
 Release:	0.20%{_snap}.1
@@ -26,14 +26,14 @@ OpenAL++ is an object oriented wrapper for OpenAL. It makes using
 spatial sound extremely easy. It has built in functionality for
 streaming sound over sockets or from an input device.
 
-%description -l pl
-OpenAL++ to zorientowany obiektowo wrapper na OpenAL. Znacznie u³atwia
-u¿ywanie d¼wiêku przestrzennego. Posiada wbudowan± funkcjonalno¶æ
-strumieniowania d¼wiêku po gniazdach lub z urz±dzenia wej¶ciowego.
+%description -l pl.UTF-8
+OpenAL++ to zorientowany obiektowo wrapper na OpenAL. Znacznie uÅ‚atwia
+uÅ¼ywanie dÅºwiÄ™ku przestrzennego. Posiada wbudowanÄ… funkcjonalnoÅ›Ä‡
+strumieniowania dÅºwiÄ™ku po gniazdach lub z urzÄ…dzenia wejÅ›ciowego.
 
 %package devel
 Summary:	Header files for OpenAL++ library
-Summary(pl):	Pliki nag³ówkowe biblioteki OpenAL++
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki OpenAL++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	OpenAL-devel
@@ -45,19 +45,19 @@ Requires:	libstdc++-devel
 %description devel
 Header files for OpenAL++ library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki OpenAL++.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki OpenAL++.
 
 %package static
 Summary:	Static OpenAL++ library
-Summary(pl):	Statyczna biblioteka OpenAL++
+Summary(pl.UTF-8):   Statyczna biblioteka OpenAL++
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static OpenAL++ library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka OpenAL++.
 
 %prep
